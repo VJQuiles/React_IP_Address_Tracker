@@ -2,8 +2,8 @@ import './App.css'
 import { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import SearchForm from './components/SearchForm'
-import ResultsDisplay 
-import MapDisplay 
+import ResultsDisplay from './components/ResultsDisplay'
+import MapDisplay from './components/MapDisplay'
 
 function App() {
   const [ipData, setIpData] = useState(null)
