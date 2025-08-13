@@ -1,15 +1,20 @@
-import type { FormEvent } from "react"
+import { useState, type FormEvent } from "react"
 import { Form, InputGroup, Button } from "react-bootstrap"
 
 type SearchFormProps = {
-    // data type may have to be changed
     onSearch: (data: any) => void
 }
 
 export default function SearchForm({ onSearch }: SearchFormProps) {
+    const [query, setQuery] = useState("")
+
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
-        // input validation and api call will go here
+        if (!query.trim()) {
+            return
+        }
+        onSearch(query.trim())
+        setQuery("")
     }
 
     return (
@@ -18,6 +23,8 @@ export default function SearchForm({ onSearch }: SearchFormProps) {
                 <Form.Control
                     type="text"
                     placeholder="Enter an IP Address or Domain"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
                 />
                 {/* ammend button to have the picture */}
                 <Button variant="dark" type="submit">Search</Button>
