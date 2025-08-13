@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import { Container } from 'react-bootstrap'
-import SearchForm 
+import SearchForm from './components/SearchForm'
 import ResultsDisplay 
 import MapDisplay 
 
