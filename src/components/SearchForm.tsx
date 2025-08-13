@@ -21,6 +21,7 @@ export default function SearchForm({ onSearch }: SearchFormProps) {
         <Form onSubmit={handleSubmit}>
             <InputGroup>
                 <Form.Control
+                    id="searchBar"
                     type="text"
                     placeholder="Enter an IP Address or Domain"
                     value={query}

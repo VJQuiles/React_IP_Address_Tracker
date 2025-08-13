@@ -1,7 +1,8 @@
-import { Card } from "react-bootstrap"
+import { Card, Row, Col } from "react-bootstrap"
+import type { IPData } from "../services/apiService"
 
 type ResultsDisplayProps = {
-    data: any
+    data: IPData | null
 }
 
 export default function ResultsDisplay({ data }: ResultsDisplayProps) {
@@ -12,7 +13,24 @@ export default function ResultsDisplay({ data }: ResultsDisplayProps) {
     return (
         <Card>
             <Card.Body>
-                {/* the 4 pieces of data will be displayed here */}
+                <Row>
+                    <Col>
+                        <h6>IP Address</h6>
+                        <p>{data.ip}</p>
+                    </Col>
+                    <Col>
+                        <h6>Location</h6>
+                        <p>{data.location}</p>
+                    </Col>
+                    <Col>
+                        <h6>Timezone</h6>
+                        <p>{data.timezone}</p>
+                    </Col>
+                    <Col>
+                        <h6>ISP</h6>
+                        <p>{data.isp}</p>
+                    </Col>
+                </Row>
             </Card.Body>
         </Card>
     )
