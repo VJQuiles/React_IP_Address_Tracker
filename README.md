@@ -1,3 +1,9 @@
+# 🚧 Under Construction 🚧
+
+Currently, the application is able to render the map to a default location, and the api is able to fetch and show the information. I still have to get the marker and popup to show up, dynamically update the map with the coordinates from the api call, and fix the ui to have a header and display information in the appropiate locations
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
