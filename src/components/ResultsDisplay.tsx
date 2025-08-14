@@ -1,5 +1,6 @@
-import { Card, Row, Col } from "react-bootstrap"
+import "../index.css"
 import type { IPData } from "../services/apiService"
+import { Card, Row, Col } from "react-bootstrap"
 
 type ResultsDisplayProps = {
     data: IPData | null
@@ -11,24 +12,24 @@ export default function ResultsDisplay({ data }: ResultsDisplayProps) {
     }
 
     return (
-        <Card>
+        <Card className="results-display-card">
             <Card.Body>
-                <Row>
-                    <Col>
-                        <h6>IP Address</h6>
-                        <p>{data.ip}</p>
+                <Row className="text-center">
+                    <Col className="info-col">
+                        <h6 className="info-title">IP Address</h6>
+                        <span className="info-value">{data.ip}</span>
                     </Col>
-                    <Col>
-                        <h6>Location</h6>
-                        <p>{data.location}</p>
+                    <Col className="info-col">
+                        <h6 className="info-title">Location</h6>
+                        <span className="info-value">{data.location}</span>
                     </Col>
-                    <Col>
-                        <h6>Timezone</h6>
-                        <p>{data.timezone}</p>
+                    <Col className="info-col">
+                        <h6 className="info-title">Timezone</h6>
+                        <span className="info-value">{data.timezone}</span>
                     </Col>
-                    <Col>
-                        <h6>ISP</h6>
-                        <p>{data.isp}</p>
+                    <Col className="info-col">
+                        <h6 className="info-title">ISP</h6>
+                        <span className="info-value">{data.isp}</span>
                     </Col>
                 </Row>
             </Card.Body>

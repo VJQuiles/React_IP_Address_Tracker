@@ -7,3 +7,44 @@
   height: 500px;
   width: 100%;
 }
+
+.results-display-card {
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #fff;
+    display: flex;           
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-col {
+    border-left: 1px solid hsl(0, 0%, 58%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.info-col:first-child {
+    border-left: none;
+}
+
+.info-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 58%);
+    margin-bottom: 2px; 
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(0, 0%, 17%);
+}
