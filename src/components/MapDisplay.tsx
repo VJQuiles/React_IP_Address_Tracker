@@ -26,4 +26,4 @@ export default function MapDisplay({ data }: MapDisplayProps) {
             </MapContainer>
         </div>
     );
-}
+}     
