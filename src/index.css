@@ -12,13 +12,81 @@ body {
 }
 
 .map-container {
-  height: 500px;
+  height: 600px;
   width: 100%;
 }
 
 .map-wrapper {
   position: relative;
 }
+
+.search-hero {
+  background: url("../src/assets/pattern-bg-desktop.png") no-repeat center/cover;
+  padding: 24px 16px 90px;
+  text-align: center;
+  position: relative;
+  max-height: 220px;
+}
+
+.search-title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.search-form {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.search-input.form-control {
+  border: none;
+  height: 45px;
+  width: 325px;
+  padding: 0 16px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+}
+
+.search-input-group {
+  align-items: stretch;
+}
+
+.search-input {
+  border: none;
+  padding: 0;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+}
+
+.search-btn {
+  flex: 0 0 45px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background: #1b1b1b;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
+  padding: 0;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .14), 0 0 0 3px rgba(13, 110, 253, .25);
+}
+
+.search-btn:focus {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .14), 0 0 0 3px rgba(13, 110, 253, .25);
+}
+
+.search-btn img {
+  width: 16px;
+  height: 16px;
+}
+
 
 .results-display-card {
   position: absolute;
