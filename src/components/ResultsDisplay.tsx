@@ -1,6 +1,6 @@
 import "../index.css"
 import type { IPData } from "../services/apiService"
-import { Card, Row, Col } from "react-bootstrap"
+import { Card } from "react-bootstrap"
 
 type ResultsDisplayProps = {
     data: IPData | null
@@ -14,24 +14,22 @@ export default function ResultsDisplay({ data }: ResultsDisplayProps) {
     return (
         <Card className="results-display-card">
             <Card.Body>
-                <Row className="text-center">
-                    <Col className="info-col">
-                        <h6 className="info-title">IP Address</h6>
-                        <span className="info-value">{data.ip}</span>
-                    </Col>
-                    <Col className="info-col">
-                        <h6 className="info-title">Location</h6>
-                        <span className="info-value">{data.location}</span>
-                    </Col>
-                    <Col className="info-col">
-                        <h6 className="info-title">Timezone</h6>
-                        <span className="info-value">{data.timezone}</span>
-                    </Col>
-                    <Col className="info-col">
-                        <h6 className="info-title">ISP</h6>
-                        <span className="info-value">{data.isp}</span>
-                    </Col>
-                </Row>
+                <div className="info-col">
+                    <div className="info-title">IP Address</div>
+                    <div className="info-value">{data.ip}</div>
+                </div>
+                <div className="info-col">
+                    <div className="info-title">Location</div>
+                    <div className="info-value">{data.location}</div>
+                </div>
+                <div className="info-col">
+                    <div className="info-title">Timezone</div>
+                    <div className="info-value">{data.timezone}</div>
+                </div>
+                <div className="info-col">
+                    <div className="info-title">ISP</div>
+                    <div className="info-value">{data.isp}</div>
+                </div>
             </Card.Body>
         </Card>
     )

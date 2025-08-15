@@ -29,9 +29,11 @@ function App() {
   return (
     <>
       <Container>
-        <SearchForm onSearch={handleSearch} />
-        <ResultsDisplay data={ipData} />
-        <MapDisplay data={ipData} />
+        <div className='map-wrapper'>
+          <SearchForm onSearch={handleSearch} />
+          <ResultsDisplay data={ipData} />
+          <MapDisplay data={ipData} />
+        </div>
       </Container>
     </>
   )

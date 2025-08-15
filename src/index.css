@@ -1,3 +1,11 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  color: hsl(0, 0%, 17%)
+}
+
 .leaflet-container {
   height: 100%;
   width: 100%;
@@ -8,43 +16,57 @@
   width: 100%;
 }
 
+.map-wrapper {
+  position: relative;
+}
+
 .results-display-card {
-    position: absolute;
-    top: 20px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-    padding: 10px 20px;
-    background-color: #fff;
-    display: flex;           
-    justify-content: space-between;
-    align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 10000;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
 }
 
 .info-col {
-    border-left: 1px solid hsl(0, 0%, 58%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 10px;
 }
 
-.info-col:first-child {
-    border-left: none;
+.info-col+.info-col {
+  border-left: 1px solid hsl(0, 4%, 51%);
+  padding-left: 28px;
 }
 
 .info-title {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: hsl(0, 0%, 58%);
-    margin-bottom: 2px; 
+  color: hsl(0, 0%, 58%);
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 4px;
 }
 
 .info-value {
-    font-size: 16px;
-    font-weight: 700;
-    color: hsl(0, 0%, 17%);
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(0, 0%, 17%);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
