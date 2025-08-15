@@ -1,9 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   height: 100%;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
-  color: hsl(0, 0%, 17%)
+  color: hsl(0, 0%, 17%);
+  margin: 0;
+  padding: 0;
 }
 
 .leaflet-container {
@@ -42,7 +54,7 @@ body {
 .search-input.form-control {
   border: none;
   height: 45px;
-  width: 325px;
+  width: 400px;
   padding: 0 16px;
   border-radius: 12px 0 0 12px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
@@ -50,6 +62,8 @@ body {
 
 .search-input-group {
   align-items: stretch;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .search-input {
@@ -90,7 +104,7 @@ body {
 
 .results-display-card {
   position: absolute;
-  top: 225px;
+  top: 22%;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
@@ -137,4 +151,63 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media (max-width: 375px) {
+  .search-hero {
+    background: url("./assets/pattern-bg-mobile.png") no-repeat center/cover;
+    min-height: 180px;
+    padding: 16px 12px 72px;
+  }
+
+  .search-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .search-form {
+    max-width: 92%;
+  }
+
+  .search-input.form-control,
+  .search-btn {
+    height: 36px;
+  }
+
+  .search-btn {
+    flex: 0 0 40px;
+  }
+
+
+  .map-container {
+    height: 420px;
+  }
+
+
+  .results-display-card {
+    width: 92%;
+    top: 100px;
+    border-radius: 12px;
+  }
+
+  .results-display-card .card-body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .info-col+.info-col {
+    border-left: none;
+    padding-left: 0;
+  }
+
+
+  .info-title {
+    font-size: 11px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
 }
