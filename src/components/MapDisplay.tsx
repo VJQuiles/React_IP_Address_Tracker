@@ -5,7 +5,6 @@ import "leaflet/dist/leaflet.css"
 import markerIcon from "leaflet/dist/images/marker-icon.png"
 import markerShadow from "leaflet/dist/images/marker-shadow.png"
 
-
 const DefaultIcon = L.icon({
     iconUrl: markerIcon,
     shadowUrl: markerShadow,
@@ -39,9 +38,6 @@ export default function MapDisplay({ data }: MapDisplayProps) {
     const champDefault: [number, number] = [39.900833, -75.1675]
     const markerPosition: [number, number] = data ? [data.lat, data.lng] : champDefault
     const mapKey = import.meta.env.VITE_MAP_KEY
-
-
-    console.log("Marker position:", champDefault)
 
     return (
         <div className="map-container">

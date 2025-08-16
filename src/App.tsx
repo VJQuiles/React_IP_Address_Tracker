@@ -4,16 +4,15 @@ import { Container } from 'react-bootstrap'
 import SearchForm from './components/SearchForm'
 import ResultsDisplay from './components/ResultsDisplay'
 import MapDisplay from './components/MapDisplay'
-import { fetchIPData } from './services/apiService'
+import { fetchIPData, type IPData } from './services/apiService'
 import { ValidationError, NetworkError, DataError } from './util/errorHandler'
 
 function App() {
-  const [ipData, setIpData] = useState(null)
+  const [ipData, setIpData] = useState<IPData | null>(null)
 
   const handleSearch = async (query: string) => {
     try {
       const data = await fetchIPData(query)
-      //void for now because I havent defined the api call, that should fix this
       setIpData(data)
     }
     catch (e: unknown) {
